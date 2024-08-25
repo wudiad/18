@@ -76,19 +76,18 @@
       <button onclick="alert('去做点小朋友该做的事')">未满18岁</button>
     </div>
     <footer><a href="" target="_blank"></a></footer>
-<script>
-  const video = document.createElement('video')
-  video.src = 'https://fastly.jsdelivr.net/gh/wudiad/18@2ae75dec9fc5cba5c2e5cb444abe867c3f865437/video.mp4'
-  video.width = video.height = 0
-  document.body.appendChild(video)
-  const playVideo = () => {
-    video.play().then(() => {
-      if (video.requestFullscreen) video.requestFullscreen()
-      else if (video.webkitRequestFullscreen) video.webkitRequestFullscreen()
-      else video.msRequestFullscreen()
-    })
-  }
-</script>
-
+    <script>
+      const video = document.createElement('video')
+      video.src = 'video.mp4'
+      video.width = video.height = 0
+      document.body.appendChild(video)
+      const playVideo = () => {
+        video.play().then(() => {
+          if (video.requestFullscreen) video.requestFullscreen()
+          else if (video.webkitRequestFullscreen) video.webkitRequestFullscreen()
+          else video.msRequestFullscreen()
+        })
+      }
+    </script>
   </body>
 </html>
